@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar for select elements */
+select::-webkit-scrollbar {
+  width: 8px;
+}
+
+select::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+select::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+select::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 768px) {
+  /* Prevent zoom on input focus */
+  input[type="tel"],
+  select {
+    font-size: 16px;
+  }
+  
+  /* Improve touch targets */
+  button {
+    min-height: 44px;
+  }
+  
+  /* Better spacing for mobile */
+  .mobile-spacing {
+    padding: 1rem;
+  }
+  
+  /* Ensure proper spacing */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header height adjustment */
+  .main-content-with-header {
+    padding-top: 80px;
+  }
+}
+
+/* Ensure proper viewport handling */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Improve form element appearance on mobile */
+input, select, button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.5rem;
+}
+
+/* Better focus states for accessibility */
+input:focus, select:focus, button:focus {
+  outline: 2px solid #fbbf24;
+  outline-offset: 2px;
+}
